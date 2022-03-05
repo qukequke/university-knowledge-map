@@ -79,7 +79,7 @@ python dingding.py
 
 启动一个flask程序， 在钉钉开放后台中部署即可 具体配置可参考https://open.dingtalk.com/document/tutorial/create-a-robot
 7 可以加入我的组织和机器人对话，有问题可以直接和我交流
-![钉钉对话例子](img/img.jpg)
+![钉钉对话例子](img/img.png)
 ![钉钉](img/dingding.jpg)
 
 
