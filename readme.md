@@ -45,7 +45,7 @@
 1 环境,个人python3.6.8, centos系统(阿里云服务器)
 
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 2 建立neo4j数据库 docker启动方式
