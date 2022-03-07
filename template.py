@@ -2,8 +2,8 @@
 semantic_slot = [
     {
         "question_type": "城市有什么学校",
-        "keywords": ["有哪", '都有什么', '有什么', '那些', '哪些', '包含'],
-        "slot_list": ["大学", '城市'],
+        "keywords": ["有哪", '都有什么', '有什么', '那些', '哪些', '包含', '有啥'],
+        "slot_list": ['城市'],
         "sql": [
             "MATCH (m)<-[:`位于`]-(n:`大学`) where {} return m.name, n.name",
             "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where {} return m.name, n.name",
@@ -21,6 +21,7 @@ semantic_slot = [
         "object": ["n.name", ],
         "pretty": "{} 属于 {}",
     },
+
     {
         "question_type": "包含",
         "keywords": ["有哪", '都有什么', '有什么', '那些', '哪些'],
@@ -33,7 +34,7 @@ semantic_slot = [
 
     {
         "question_type": "简介",
-        "keywords": ["简介", '概述'],
+        "keywords": ["简介", '概述', '怎么样', '好吗'],
         "slot_list": ["大学"],
         "sql": "MATCH (m) where {} return m.name, m.desc",
         "subject": "m.name",

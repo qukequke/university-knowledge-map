@@ -1,0 +1,874 @@
+Adding connection pool for profile ConnectionProfile('bolt://106.14.140.139:7687')
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+[#0000] C: (Dialing <106.14.140.139:7687>)
+[#21D2] S: (Accepted)
+[#21D2] C: <BOLT>
+[#21D2] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+[#21D2] S: <PROTOCOL> 4.3
+[#21D2] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.6.4-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+[#21D2] C: (Sent 114 bytes)
+[#21D2] S: SUCCESS {'server': 'Neo4j/4.4.2', 'connection_id': 'bolt-1431', 'hints': {}}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> does not belong to pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> acquired by thread <_MainThread(MainThread, started 18708)>
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D2] C: RUN 'match(n)  return distinct n.name, labels(n)' {} {}
+[#21D2] C: PULL {'n': -1, 'qid': -1}
+[#21D2] C: (Sent 68 bytes)
+[#21D2] S: SUCCESS {'t_first': 9, 'fields': ['n.name', 'labels(n)']}
+[#21D2] S: RECORD * 70
+[#21D2] S: RECORD * 131
+[#21D2] S: RECORD * 1
+[#21D2] S: RECORD * 71
+[#21D2] S: RECORD * 71
+[#21D2] S: RECORD * 71
+[#21D2] S: RECORD * 346
+[#21D2] S: RECORD * 71
+[#21D2] S: RECORD * 212
+[#21D2] S: RECORD * 71
+[#21D2] S: RECORD * 398
+[#21D2] S: RECORD * 370
+[#21D2] S: RECORD * 70
+[#21D2] S: RECORD * 351
+[#21D2] S: RECORD * 1
+[#21D2] S: RECORD * 70
+[#21D2] S: RECORD * 69
+[#21D2] S: RECORD * 68
+[#21D2] S: RECORD * 489
+[#21D2] S: RECORD * 241
+[#21D2] S: RECORD * 59
+[#21D2] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 45, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D2] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D2] C: PULL {'n': -1, 'qid': -1}
+[#21D2] C: (Sent 92 bytes)
+[#21D2] S: SUCCESS {'t_first': 64, 'fields': ['n.name']}
+[#21D2] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 22, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D2] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D2] C: PULL {'n': -1, 'qid': -1}
+[#21D2] C: (Sent 92 bytes)
+[#21D2] S: SUCCESS {'t_first': 31, 'fields': ['n.name']}
+[#21D2] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 6, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D2] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D2] C: PULL {'n': -1, 'qid': -1}
+[#21D2] C: (Sent 98 bytes)
+[#21D2] S: SUCCESS {'t_first': 27, 'fields': ['n.name']}
+[#21D2] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191A841C88>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D2] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D2] C: PULL {'n': -1, 'qid': -1}
+[#21D2] C: (Sent 98 bytes)
+[#21D2] S: SUCCESS {'t_first': 14, 'fields': ['n.name']}
+[#21D2] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191A86D7B8> from thread <_MainThread(MainThread, started 18708)>
+Adding connection pool for profile ConnectionProfile('bolt://106.14.140.139:7687')
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+[#0000] C: (Dialing <106.14.140.139:7687>)
+[#21D6] S: (Accepted)
+[#21D6] C: <BOLT>
+[#21D6] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+[#21D6] S: <PROTOCOL> 4.3
+[#21D6] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.6.4-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+[#21D6] C: (Sent 114 bytes)
+[#21D6] S: SUCCESS {'server': 'Neo4j/4.4.2', 'connection_id': 'bolt-1435', 'hints': {}}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> does not belong to pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match(n)  return distinct n.name, labels(n)' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 68 bytes)
+[#21D6] S: SUCCESS {'t_first': 21, 'fields': ['n.name', 'labels(n)']}
+[#21D6] S: RECORD * 70
+[#21D6] S: RECORD * 274
+[#21D6] S: RECORD * 71
+[#21D6] S: RECORD * 68
+[#21D6] S: RECORD * 69
+[#21D6] S: RECORD * 398
+[#21D6] S: RECORD * 94
+[#21D6] S: RECORD * 71
+[#21D6] S: RECORD * 107
+[#21D6] S: RECORD * 394
+[#21D6] S: RECORD * 392
+[#21D6] S: RECORD * 398
+[#21D6] S: RECORD * 38
+[#21D6] S: RECORD * 68
+[#21D6] S: RECORD * 489
+[#21D6] S: RECORD * 300
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 24, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 92 bytes)
+[#21D6] S: SUCCESS {'t_first': 16, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 92 bytes)
+[#21D6] S: SUCCESS {'t_first': 26, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 98 bytes)
+[#21D6] S: SUCCESS {'t_first': 18, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 98 bytes)
+[#21D6] S: SUCCESS {'t_first': 14, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 98 bytes)
+[#21D6] S: SUCCESS {'t_first': 5, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 92 bytes)
+[#21D6] S: SUCCESS {'t_first': 4, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 92 bytes)
+[#21D6] S: SUCCESS {'t_first': 11, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 7, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002191C13EDD8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> acquired by thread <_MainThread(MainThread, started 18708)>
+[#21D6] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#21D6] C: PULL {'n': -1, 'qid': -1}
+[#21D6] C: (Sent 98 bytes)
+[#21D6] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#21D6] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002191C13EEF0> from thread <_MainThread(MainThread, started 18708)>
+Adding connection pool for profile ConnectionProfile('bolt://106.14.140.139:7687')
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+[#0000] C: (Dialing <106.14.140.139:7687>)
+[#14FC] S: (Accepted)
+[#14FC] C: <BOLT>
+[#14FC] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+[#14FC] S: <PROTOCOL> 4.3
+[#14FC] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.6.4-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+[#14FC] C: (Sent 114 bytes)
+[#14FC] S: SUCCESS {'server': 'Neo4j/4.4.2', 'connection_id': 'bolt-1442', 'hints': {}}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> does not belong to pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match(n)  return distinct n.name, labels(n)' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 68 bytes)
+[#14FC] S: SUCCESS {'t_first': 4, 'fields': ['n.name', 'labels(n)']}
+[#14FC] S: RECORD * 70
+[#14FC] S: RECORD * 203
+[#14FC] S: RECORD * 71
+[#14FC] S: RECORD * 71
+[#14FC] S: RECORD * 346
+[#14FC] S: RECORD * 71
+[#14FC] S: RECORD * 212
+[#14FC] S: RECORD * 71
+[#14FC] S: RECORD * 398
+[#14FC] S: RECORD * 370
+[#14FC] S: RECORD * 70
+[#14FC] S: RECORD * 210
+[#14FC] S: RECORD * 281
+[#14FC] S: RECORD * 68
+[#14FC] S: RECORD * 489
+[#14FC] S: RECORD * 300
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 34, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 92 bytes)
+[#14FC] S: SUCCESS {'t_first': 1, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 92 bytes)
+[#14FC] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 98 bytes)
+[#14FC] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 98 bytes)
+[#14FC] S: SUCCESS {'t_first': 1, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 98 bytes)
+[#14FC] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 92 bytes)
+[#14FC] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 92 bytes)
+[#14FC] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x0000021FDF6805F8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> acquired by thread <_MainThread(MainThread, started 17936)>
+[#14FC] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#14FC] C: PULL {'n': -1, 'qid': -1}
+[#14FC] C: (Sent 98 bytes)
+[#14FC] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#14FC] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x0000021FDFE11C18> from thread <_MainThread(MainThread, started 17936)>
+Adding connection pool for profile ConnectionProfile('bolt://106.14.140.139:7687')
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+[#0000] C: (Dialing <106.14.140.139:7687>)
+[#151B] S: (Accepted)
+[#151B] C: <BOLT>
+[#151B] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+[#151B] S: <PROTOCOL> 4.3
+[#151B] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.6.4-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+[#151B] C: (Sent 114 bytes)
+[#151B] S: SUCCESS {'server': 'Neo4j/4.4.2', 'connection_id': 'bolt-1449', 'hints': {}}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> does not belong to pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match(n)  return distinct n.name, labels(n)' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 68 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name', 'labels(n)']}
+[#151B] S: RECORD * 70
+[#151B] S: RECORD * 274
+[#151B] S: RECORD * 71
+[#151B] S: RECORD * 207
+[#151B] S: RECORD * 397
+[#151B] S: RECORD * 25
+[#151B] S: RECORD * 71
+[#151B] S: RECORD * 398
+[#151B] S: RECORD * 389
+[#151B] S: RECORD * 398
+[#151B] S: RECORD * 144
+[#151B] S: RECORD * 68
+[#151B] S: RECORD * 489
+[#151B] S: RECORD * 300
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 17, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 92 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 92 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 98 bytes)
+[#151B] S: SUCCESS {'t_first': 1, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 98 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`主管单位`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 98 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`城市`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 92 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`大学`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 92 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 1, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000001766DB80630>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> acquired by thread <_MainThread(MainThread, started 16692)>
+[#151B] C: RUN 'match (n:`学校层次`) where n.nodeType=1 or n.nodeType=4 return n.name' {} {}
+[#151B] C: PULL {'n': -1, 'qid': -1}
+[#151B] C: (Sent 98 bytes)
+[#151B] S: SUCCESS {'t_first': 0, 'fields': ['n.name']}
+[#151B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000001766E318C18> from thread <_MainThread(MainThread, started 16692)>
+Adding connection pool for profile ConnectionProfile('bolt://106.14.140.139:7687')
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+[#0000] C: (Dialing <106.14.140.139:7687>)
+[#152B] S: (Accepted)
+[#152B] C: <BOLT>
+[#152B] C: <PROTOCOL> 4.3~4.0 | 4.0 | 3.0 | 2.0
+[#152B] S: <PROTOCOL> 4.3
+[#152B] C: HELLO {'user_agent': 'py2neo/2021.2.3 Python/3.6.4-final-0 (win32)', 'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+[#152B] C: (Sent 114 bytes)
+[#152B] S: SUCCESS {'server': 'Neo4j/4.4.2', 'connection_id': 'bolt-1453', 'hints': {}}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> does not belong to pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> acquired by thread <_MainThread(MainThread, started 17180)>
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> acquired by thread <_MainThread(MainThread, started 17180)>
+[#152B] C: RUN 'match(n)  return distinct n.name, labels(n)' {} {}
+[#152B] C: PULL {'n': -1, 'qid': -1}
+[#152B] C: (Sent 68 bytes)
+[#152B] S: SUCCESS {'t_first': 1, 'fields': ['n.name', 'labels(n)']}
+[#152B] S: RECORD * 70
+[#152B] S: RECORD * 274
+[#152B] S: RECORD * 71
+[#152B] S: RECORD * 346
+[#152B] S: RECORD * 283
+[#152B] S: RECORD * 71
+[#152B] S: RECORD * 398
+[#152B] S: RECORD * 389
+[#152B] S: RECORD * 398
+[#152B] S: RECORD * 144
+[#152B] S: RECORD * 68
+[#152B] S: RECORD * 489
+[#152B] S: RECORD * 300
+[#152B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 20, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> acquired by thread <_MainThread(MainThread, started 17180)>
+[#152B] C: RUN 'match (n:`大学`) return n.name' {} {}
+[#152B] C: PULL {'n': -1, 'qid': -1}
+[#152B] C: (Sent 57 bytes)
+[#152B] S: SUCCESS {'t_first': 8, 'fields': ['n.name']}
+[#152B] S: RECORD * 177
+[#152B] S: RECORD * 492
+[#152B] S: RECORD * 492
+[#152B] S: RECORD * 494
+[#152B] S: RECORD * 483
+[#152B] S: RECORD * 1
+[#152B] S: RECORD * 76
+[#152B] S: RECORD * 1
+[#152B] S: RECORD * 256
+[#152B] S: RECORD * 263
+[#152B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 3, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> acquired by thread <_MainThread(MainThread, started 17180)>
+[#152B] C: RUN 'match (n:`城市`) return n.name' {} {}
+[#152B] C: PULL {'n': -1, 'qid': -1}
+[#152B] C: (Sent 57 bytes)
+[#152B] S: SUCCESS {'t_first': 10, 'fields': ['n.name']}
+[#152B] S: RECORD * 431
+[#152B] S: RECORD * 1
+[#152B] S: RECORD * 49
+[#152B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> acquired by thread <_MainThread(MainThread, started 17180)>
+[#152B] C: RUN 'match (n:`主管单位`) return n.name' {} {}
+[#152B] C: PULL {'n': -1, 'qid': -1}
+[#152B] C: (Sent 63 bytes)
+[#152B] S: SUCCESS {'t_first': 9, 'fields': ['n.name']}
+[#152B] S: RECORD * 84
+[#152B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+Attempting to acquire read-write connection to default database
+Using connection pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Trying to acquire connection from pool <py2neo.client.ConnectionPool object at 0x000002825D2906D8>
+Connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> acquired by thread <_MainThread(MainThread, started 17180)>
+[#152B] C: RUN 'match (n:`学校层次`) return n.name' {} {}
+[#152B] C: PULL {'n': -1, 'qid': -1}
+[#152B] C: (Sent 63 bytes)
+[#152B] S: SUCCESS {'t_first': 9, 'fields': ['n.name']}
+[#152B] S: RECORD * 3
+[#152B] S: SUCCESS {'bookmark': 'FB:kcwQgbNGSASKRwOqBatw0qzW6ckq3JA=', 'type': 'r', 't_last': 0, 'db': 'neo4j'}
+Releasing connection <py2neo.client.bolt.Bolt4x3 object at 0x000002825DA21CC0> from thread <_MainThread(MainThread, started 17180)>
+找到实体为{'河北省': ['主管单位', '城市']}
+找到实体为{'河北省': ['主管单位', '城市']}
+找到实体为{'河北省': ['主管单位', '城市']}
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+{'123': {'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+{'123': {'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}}
+小勇:
+找到实体为{'211': ['学校层次']}
+问题分类结果为{'args': {'211': ['学校层次']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+整合后的结果为{'args': {'211': ['学校层次']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+{'qa_count': 2, 'slot_list': ['学校层次'], 'slot_values': {'学校层次': '211'}, 'user_intent': []}
+{'123': {'qa_count': 2, 'slot_list': ['学校层次'], 'slot_values': {'学校层次': '211'}, 'user_intent': []}}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+{'123': {'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+{'123': {'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['位置有什么学校']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+{'123': {'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+找到实体为{'河北省': ['主管单位', '城市']}
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+{'qa_count': 2, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)-[:`包含`]->[n] where (m:`大学` or m:`学校层次` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': []}
+意图继承
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': []}
+{'qa_count': 2, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': []}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', 'ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', 'ABC类包含什么']}
+{'qa_count': 3, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)-[:`包含`]->(n) where (m:`大学` or m:`学校层次` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+小勇:河北省有衡水市、廊坊市、沧州市、承德市、张家口市、保定市、邢台市、邯郸市、秦皇岛市、唐山市、石家庄市这些大学
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', 'ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', 'ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)-[:`包含`]->(n:`大学`) where (m:`大学` or m:`学校层次` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+{'qa_count': 2, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)-[:`包含`]->(n:`大学`) where (m:`大学` or m:`学校层次` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': [], 'may_question_types': []}
+意图继承
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': '', 'may_question_types': []}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ''}
+小勇:
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+{'qa_count': 2, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`学校层次` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+小勇:
+找到实体为{'上海市': ['主管单位', '城市']}
+问题分类结果为{'args': {'上海市': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+整合后的结果为{'args': {'上海市': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校']}
+{'qa_count': 3, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '上海市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`学校层次` or m:`城市`) and m.name='上海市' return m.name, n.name"]
+小勇:上海市有上海外国语大学贤达经济人文学院、上海南湖职业技术学院、上海民航职业技术学院、上海工会管理职业学院、上海中华职业技术学院、上海电影艺术职业学院、上海邦德职业技术学院、上海农林职业技术学院、上海科学技术职业学院、上海工商外国语职业学院、上海济光职业技术学院、上海工艺美术职业学院、上海思博职业技术学院、上海欧华职业技术学院、上海民远职业技术学院、上海震旦职业学院、上海电子信息职业技术学院、上海海事职业技术学院、上海交通职业技术学院、上海城建职业学院、上海行健职业学院、上海出版印刷高等专科学校、上海工商职业技术学院、上海东海职业技术学院、上海纽约大学、上海科技大学、上海师范大学天华学院、复旦大学、同济大学、上海交通大学、华东理工大学、上海理工大学、上海海事大学、东华大学、上海电力大学、上海应用技术大学、上海健康医学院、上海海洋大学、上海中医药大学、华东师范大学、上海师范大学、上海外国语大学、上海财经大学、上海对外经贸大学、上海海关学院、华东政法大学、上海体育学院、上海音乐学院、上海戏剧学院、上海大学、上海工程技术大学、上海立信会计金融学院、上海电机学院、上海杉达学院、上海政法学院、上海商学院、上海立达学院、上海建桥学院、上海兴伟学院、上海中侨职业技术大学、上海视觉艺术学院这些大学
+找到实体为{'北京大学': ['大学']}
+问题分类结果为{'args': {'北京大学': ['大学']}, 'question_types': ['校训'], 'may_question_types': ['校训']}
+清空用户状态
+整合后的结果为{'args': {'北京大学': ['大学']}, 'question_types': ['校训'], 'may_question_types': ['校训']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '北京大学'}, 'user_intent': ['校训']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='北京大学' return m.name, m.`校训`"]
+找到实体为{'清华大学': ['大学']}
+问题分类结果为{'args': {'清华大学': ['大学']}, 'question_types': ['校训'], 'may_question_types': ['校训']}
+整合后的结果为{'args': {'清华大学': ['大学']}, 'question_types': ['校训'], 'may_question_types': ['校训']}
+{'qa_count': 1, 'slot_list': ['大学'], 'slot_values': {'大学': '清华大学'}, 'user_intent': ['校训']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='清华大学' return m.name, m.`校训`"]
+小勇:清华大学的校训是自强不息，厚德载物
+找到实体为{'北京大学': ['大学']}
+问题分类结果为{'args': {'北京大学': ['大学']}, 'question_types': ['现任领导'], 'may_question_types': ['现任领导']}
+整合后的结果为{'args': {'北京大学': ['大学']}, 'question_types': ['现任领导'], 'may_question_types': ['现任领导']}
+{'qa_count': 2, 'slot_list': ['大学'], 'slot_values': {'大学': '北京大学'}, 'user_intent': ['现任领导']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='北京大学' return m.name, m.`现任领导`"]
+小勇:北京大学的现任领导是邱水平(党委书记)、郝平(校长)
+找到实体为{'北京大学': ['大学']}
+问题分类结果为{'args': {'北京大学': ['大学']}, 'question_types': ['主管部门'], 'may_question_types': ['主管部门']}
+整合后的结果为{'args': {'北京大学': ['大学']}, 'question_types': ['主管部门'], 'may_question_types': ['主管部门']}
+{'qa_count': 3, 'slot_list': ['大学'], 'slot_values': {'大学': '北京大学'}, 'user_intent': ['主管部门']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='北京大学' return m.name, m.`主管部门`"]
+小勇:北京大学的主管部门是中华人民共和国教育部
+找到实体为{'北京大学': ['大学']}
+问题分类结果为{'args': {'北京大学': ['大学']}, 'question_types': [], 'may_question_types': []}
+清空用户状态
+整合后的结果为{'args': {'北京大学': ['大学']}, 'question_types': [], 'may_question_types': []}
+{'slot_list': ['大学'], 'slot_values': {'大学': '北京大学'}, 'user_intent': []}
+小勇:
+找到实体为{'北京大学': ['大学'], '211': ['学校层次']}
+问题分类结果为{'args': {'北京大学': ['大学'], '211': ['学校层次']}, 'question_types': [], 'may_question_types': []}
+意图继承
+整合后的结果为{'args': {'北京大学': ['大学'], '211': ['学校层次']}, 'question_types': [], 'may_question_types': []}
+{'slot_list': ['大学', '学校层次'], 'slot_values': {'大学': '北京大学', '学校层次': '211'}, 'user_intent': [], 'qa_count': 1}
+小勇:
+找到实体为{'北京大学': ['大学']}
+问题分类结果为{'args': {'北京大学': ['大学']}, 'question_types': [], 'may_question_types': ['属于哪一类不良反应', '症状属于哪一类不良反应']}
+整合后的结果为{'args': {'北京大学': ['大学']}, 'question_types': [], 'may_question_types': ['属于哪一类不良反应', '症状属于哪一类不良反应']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '北京大学'}, 'user_intent': [], 'qa_count': 2}
+小勇:
+找到实体为{'双一流': ['学校层次']}
+问题分类结果为{'args': {'双一流': ['学校层次']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+整合后的结果为{'args': {'双一流': ['学校层次']}, 'question_types': [], 'may_question_types': ['ABC类包含什么']}
+{'slot_list': ['学校层次'], 'slot_values': {'学校层次': '双一流'}, 'user_intent': [], 'qa_count': 3}
+小勇:
+找到实体为{'985': ['学校层次']}
+问题分类结果为{'args': {'985': ['学校层次']}, 'question_types': ['包含'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+整合后的结果为{'args': {'985': ['学校层次']}, 'question_types': ['包含'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['学校层次'], 'slot_values': {'学校层次': '985'}, 'user_intent': ['包含']}
+解析后的sql 为 ["MATCH (m)<-[:`属于`]-(n:`大学`) where (m:`学校层次`) and m.name='985' return m.name, n.name"]
+小勇:985 包含 复旦大学、清华大学、中国人民大学、中山大学、湖南大学、同济大学、西北农林科技大学、东南大学、北京航空航天大学、电子科技大学、山东大学、西北工业大学、北京师范大学、中国科学技术大学、重庆大学、浙江大学、中国农业大学、四川大学、华中科技大学、厦门大学、华南理工大学、大连理工大学、中国海洋大学、北京大学、南开大学、北京理工大学、东北大学、天津大学、武汉大学、上海交通大学、吉林大学、中南大学、西安交通大学、华东师范大学、中央民族大学、哈尔滨工业大学、南京大学、兰州大学这些大学
+找到实体为{'吉林大学': ['大学'], '211': ['学校层次']}
+问题分类结果为{'args': {'吉林大学': ['大学'], '211': ['学校层次']}, 'question_types': ['学校类别'], 'may_question_types': ['学校类别']}
+整合后的结果为{'args': {'吉林大学': ['大学'], '211': ['学校层次']}, 'question_types': ['学校类别'], 'may_question_types': ['学校类别']}
+{'qa_count': 1, 'slot_list': ['大学', '学校层次'], 'slot_values': {'大学': '吉林大学', '学校层次': '211'}, 'user_intent': ['学校类别']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='吉林大学' return m.name, m.`学校类别`", "MATCH (m) where (m:`大学`) and m.name='211' return m.name, m.`学校类别`"]
+小勇:吉林大学的学校类别是综合类
+找到实体为{'清华大学': ['大学']}
+问题分类结果为{'args': {'清华大学': ['大学']}, 'question_types': ['学校类别'], 'may_question_types': ['学校类别']}
+整合后的结果为{'args': {'清华大学': ['大学']}, 'question_types': ['学校类别'], 'may_question_types': ['学校类别']}
+{'qa_count': 2, 'slot_list': ['大学'], 'slot_values': {'大学': '清华大学'}, 'user_intent': ['学校类别']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='清华大学' return m.name, m.`学校类别`"]
+小勇:清华大学的学校类别是综合类
+找到实体为{'清华大学': ['大学']}
+问题分类结果为{'args': {'清华大学': ['大学']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别', '属于哪一类不良反应', '症状属于哪一类不良反应']}
+整合后的结果为{'args': {'清华大学': ['大学']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别', '属于哪一类不良反应', '症状属于哪一类不良反应']}
+{'qa_count': 1, 'slot_list': ['大学'], 'slot_values': {'大学': '清华大学'}, 'user_intent': ['学校的类别']}
+解析后的sql 为 ["MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='清华大学' return m.name, n.name"]
+小勇:清华大学 属于 双一流、211、985
+找到实体为{'清华大学': ['大学'], '双一流': ['学校层次']}
+问题分类结果为{'args': {'清华大学': ['大学'], '双一流': ['学校层次']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别']}
+整合后的结果为{'args': {'清华大学': ['大学'], '双一流': ['学校层次']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别']}
+{'qa_count': 2, 'slot_list': ['大学', '学校层次'], 'slot_values': {'大学': '清华大学', '学校层次': '双一流'}, 'user_intent': ['学校的类别']}
+解析后的sql 为 ["MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='清华大学' return m.name, n.name", "MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='双一流' return m.name, n.name"]
+小勇:清华大学 属于 双一流、211、985
+找到实体为{'吉林大学': ['大学'], '双一流': ['学校层次']}
+问题分类结果为{'args': {'吉林大学': ['大学'], '双一流': ['学校层次']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别']}
+整合后的结果为{'args': {'吉林大学': ['大学'], '双一流': ['学校层次']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别']}
+{'qa_count': 3, 'slot_list': ['大学', '学校层次'], 'slot_values': {'大学': '吉林大学', '学校层次': '双一流'}, 'user_intent': ['学校的类别']}
+解析后的sql 为 ["MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='吉林大学' return m.name, n.name", "MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='双一流' return m.name, n.name"]
+小勇:吉林大学 属于 双一流、211、985
+找到实体为{'燕山大学': ['大学'], '双一流': ['学校层次']}
+问题分类结果为{'args': {'燕山大学': ['大学'], '双一流': ['学校层次']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别', '属于哪一类不良反应', '症状属于哪一类不良反应']}
+清空用户状态
+整合后的结果为{'args': {'燕山大学': ['大学'], '双一流': ['学校层次']}, 'question_types': ['学校的类别'], 'may_question_types': ['学校的类别', '属于哪一类不良反应', '症状属于哪一类不良反应']}
+{'slot_list': ['大学', '学校层次'], 'slot_values': {'大学': '燕山大学', '学校层次': '双一流'}, 'user_intent': ['学校的类别']}
+解析后的sql 为 ["MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='燕山大学' return m.name, n.name", "MATCH (m)-[:`属于`]->(n:`学校层次`) where (m:`大学`) and m.name='双一流' return m.name, n.name"]
+小勇:
+找到实体为{'兰州大学': ['大学']}
+问题分类结果为{'args': {'兰州大学': ['大学']}, 'question_types': ['地址'], 'may_question_types': ['地址']}
+整合后的结果为{'args': {'兰州大学': ['大学']}, 'question_types': ['地址'], 'may_question_types': ['地址']}
+{'qa_count': 1, 'slot_list': ['大学'], 'slot_values': {'大学': '兰州大学'}, 'user_intent': ['地址']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='兰州大学' return m.name, m.`地址`"]
+小勇:兰州大学的地址是城关校区：兰州市城关区天水南路222号榆中校区：兰州市榆中县夏官营镇吴谢营社
+找到实体为{'燕山大学': ['大学']}
+问题分类结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['地址'], 'may_question_types': ['地址']}
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['地址'], 'may_question_types': ['地址']}
+{'qa_count': 2, 'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['地址']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='燕山大学' return m.name, m.`地址`"]
+小勇:燕山大学的地址是河北省秦皇岛市海港区河北大街西段438号
+找到实体为{}
+问题分类结果为{'args': {}, 'question_types': [], 'may_question_types': ['城市有什么学校', '包含']}
+槽位继承
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['城市有什么学校', '包含'], 'may_question_types': ['城市有什么学校', '包含']}
+{'qa_count': 3, 'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['城市有什么学校', '包含']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='燕山大学' return m.name, n.name"]
+解析后的sql 为 ["MATCH (m)<-[:`属于`]-(n:`大学`) where (m:`学校层次`) and m.name='燕山大学' return m.name, n.name"]
+小勇:
+找到实体为{'秦皇岛市': ['城市']}
+问题分类结果为{'args': {'秦皇岛市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+清空用户状态
+整合后的结果为{'args': {'秦皇岛市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['城市'], 'slot_values': {'城市': '秦皇岛市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='秦皇岛市' return m.name, n.name"]
+小勇:秦皇岛市 有 河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学这些大学
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='河北省' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where m.name='河北省' return m.name, n.name"]
+小勇:河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学、衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+{'qa_count': 1, 'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='河北省' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where m.name='河北省' return m.name, n.name"]
+小勇:河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学、衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'唐山市': ['城市']}
+问题分类结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+整合后的结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含', 'ABC类包含什么']}
+{'qa_count': 2, 'slot_list': ['城市'], 'slot_values': {'城市': '唐山市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='唐山市' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where m.name='河北省' return m.name, n.name"]
+小勇:唐山市 有 曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学这些大学 河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学、衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'唐山市': ['城市']}
+问题分类结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'qa_count': 3, 'slot_list': ['城市'], 'slot_values': {'城市': '唐山市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='唐山市' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where m.name='河北省' return m.name, n.name"]
+小勇:唐山市 有 曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学这些大学 河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学、衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'唐山市': ['城市']}
+问题分类结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'qa_count': 1, 'slot_list': ['城市'], 'slot_values': {'城市': '唐山市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='唐山市' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where m.name='河北省' return m.name, n.name"]
+小勇:唐山市 有 曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学这些大学 河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学、衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'唐山市': ['城市']}
+问题分类结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['城市'], 'slot_values': {'城市': '唐山市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='唐山市' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where m.name='河北省' return m.name, n.name"]
+小勇:唐山市 有 曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学这些大学 河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学、衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'唐山市': ['城市']}
+问题分类结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'唐山市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['城市'], 'slot_values': {'城市': '唐山市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='唐山市' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='唐山市' return m.name, n.name"]
+小勇:唐山市 有 曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学这些大学
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='河北省' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+小勇:河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+找到实体为{'湖南省': ['主管单位', '城市']}
+问题分类结果为{'args': {'湖南省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'湖南省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '湖南省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='湖南省' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='湖南省' return m.name, n.name"]
+小勇:湖南省 有 湘西民族职业技术学院、吉首大学、娄底职业技术学院、湖南人文科技学院、怀化师范高等专科学校、怀化职业技术学院、湖南医药学院、怀化学院、永州师范高等专科学校、湖南九嶷职业技术学院、永州职业技术学院、湖南科技学院、湘南幼儿师范高等专科学校、郴州职业技术学院、湘南学院、益阳医学高等专科学校、湖南工艺美术职业学院、益阳职业技术学院、湖南城市学院、张家界航空工业职业技术学院、湖南幼儿师范高等专科学校、湖南高尔夫旅游职业学院、常德职业技术学院、湖南应用技术学院、湖南文理学院芙蓉学院、湖南文理学院、湖南民族职业学院、湖南石油化工职业技术学院、岳阳职业技术学院、湖南理工学院南湖学院、湖南理工学院、邵阳职业技术学院、湘中幼儿师范高等专科学校、邵阳学院、衡阳幼儿师范高等专科学校、湖南工商职业学院、湖南高速铁路职业技术学院、湖南财经工业职业技术学院、湖南环境生物职业技术学院、湖南交通工程学院、衡阳师范学院南岳学院、南华大学船山学院、湖南工学院、南华大学、衡阳师范学院、湖南吉利汽车职业技术学院、湖南国防工业职业技术学院、湖南电气职业技术学院、湖南理工职业技术学院、湖南城建职业技术学院、湘潭医卫职业技术学院、湖南软件职业技术大学、湖南工程学院应用技术学院、湘潭理工学院、湖南科技大学潇湘学院、湘潭大学兴湘学院、湖南工程学院、湖南科技大学、湘潭大学、湖南有色金属职业技术学院、湖南铁路科技职业技术学院、湖南汽车工程职业学院、湖南中医药高等专科学校、湖南化工职业技术学院、湖南铁道职业技术学院、湖南冶金职业技术学院、株洲师范高等专科学校、湖南工业大学科技学院、湖南工业大学、湖南安全技术职业学院、长沙幼儿师范高等专科学校、湖南劳动人事职业学院、湖南食品药品职业学院、长沙卫生职业学院、湖南三一工业职业技术学院、湖南电子科技职业学院、湖南都市职业学院、湖南外国语职业学院、湖南大学、中南大学、长沙理工大学、湖南农业大学、中南林业科技大学、湖南中医药大学、湖南师范大学、湖南工商大学、长沙医学院、长沙学院、湖南财政经济学院、湖南警察学院、湖南女子学院、湖南第一师范学院、湖南涉外经济学院、湖南师范大学树达学院、湖南农业大学东方科技学院、中南林业科技大学涉外学院、湖南中医药大学湘杏学院、长沙理工大学城南学院、长沙师范学院、湖南信息学院、长沙民政职业技术学院、湖南工业职业技术学院、湖南信息职业技术学院、湖南税务高等专科学校、长沙航空职业技术学院、湖南大众传媒职业技术学院、湖南科技职业学院、湖南生物机电职业技术学院、湖南交通职业技术学院、湖南商务职业技术学院、湖南体育职业学院、湖南工程职业技术学院、保险职业学院、湖南外贸职业学院、湖南网络工程职业学院、湖南司法警官职业学院、长沙商贸旅游职业技术学院、湖南邮电职业技术学院、长沙环境保护职业技术学院、湖南艺术职业学院、湖南机电职业技术学院、长沙职业技术学院、长沙南方职业学院、长沙电力职业技术学院、湖南水利水电职业技术学院、湖南现代物流职业技术学院这些大学
+找到实体为{'长沙市': ['城市']}
+问题分类结果为{'args': {'长沙市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'长沙市': ['城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['城市'], 'slot_values': {'城市': '长沙市'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='长沙市' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='长沙市' return m.name, n.name"]
+小勇:长沙市 有 湖南安全技术职业学院、长沙幼儿师范高等专科学校、湖南劳动人事职业学院、湖南食品药品职业学院、长沙卫生职业学院、湖南三一工业职业技术学院、湖南电子科技职业学院、湖南都市职业学院、湖南外国语职业学院、湖南大学、中南大学、长沙理工大学、湖南农业大学、中南林业科技大学、湖南中医药大学、湖南师范大学、湖南工商大学、长沙医学院、长沙学院、湖南财政经济学院、湖南警察学院、湖南女子学院、湖南第一师范学院、湖南涉外经济学院、湖南师范大学树达学院、湖南农业大学东方科技学院、中南林业科技大学涉外学院、湖南中医药大学湘杏学院、长沙理工大学城南学院、长沙师范学院、湖南信息学院、长沙民政职业技术学院、湖南工业职业技术学院、湖南信息职业技术学院、湖南税务高等专科学校、长沙航空职业技术学院、湖南大众传媒职业技术学院、湖南科技职业学院、湖南生物机电职业技术学院、湖南交通职业技术学院、湖南商务职业技术学院、湖南体育职业学院、湖南工程职业技术学院、保险职业学院、湖南外贸职业学院、湖南网络工程职业学院、湖南司法警官职业学院、长沙商贸旅游职业技术学院、湖南邮电职业技术学院、长沙环境保护职业技术学院、湖南艺术职业学院、湖南机电职业技术学院、长沙职业技术学院、长沙南方职业学院、长沙电力职业技术学院、湖南水利水电职业技术学院、湖南现代物流职业技术学院这些大学
+找到实体为{'211': ['学校层次']}
+问题分类结果为{'args': {'211': ['学校层次']}, 'question_types': [], 'may_question_types': ['学校的类别']}
+整合后的结果为{'args': {'211': ['学校层次']}, 'question_types': [], 'may_question_types': ['学校的类别']}
+{'slot_list': ['学校层次'], 'slot_values': {'学校层次': '211'}, 'user_intent': []}
+小勇:
+找到实体为{'211': ['学校层次']}
+问题分类结果为{'args': {'211': ['学校层次']}, 'question_types': ['包含'], 'may_question_types': ['城市有什么学校', '学校的类别', '包含']}
+整合后的结果为{'args': {'211': ['学校层次']}, 'question_types': ['包含'], 'may_question_types': ['城市有什么学校', '学校的类别', '包含']}
+{'slot_list': ['学校层次'], 'slot_values': {'学校层次': '211'}, 'user_intent': ['包含']}
+解析后的sql 为 ["MATCH (m)<-[:`属于`]-(n:`大学`) where (m:`学校层次`) and m.name='211' return m.name, n.name"]
+小勇:院校211 包含 大连理工大学、合肥工业大学、对外经济贸易大学、复旦大学、中南财经政法大学、中央财经大学、中国传媒大学、中国石油大学（北京）、清华大学、中国人民大学、海南大学、东北农业大学、中国药科大学、北京体育大学、南昌大学、中山大学、湖南大学、北京科技大学、贵州大学、同济大学、华中农业大学、中国政法大学、东南大学、东华大学、河北工业大学、西安电子科技大学、河海大学、上海大学、延边大学、四川农业大学、西南交通大学、太原理工大学、东北林业大学、北京航空航天大学、中央音乐学院、电子科技大学、宁夏大学、山东大学、暨南大学、西北工业大学、北京外国语大学、石河子大学、北京师范大学、安徽大学、西南大学、中国科学技术大学、重庆大学、西藏大学、浙江大学、武汉理工大学、北京中医药大学、中国农业大学、四川大学、中国地质大学（北京）、华中科技大学、长安大学、厦门大学、苏州大学、华南理工大学、东北师范大学、兰州大学、广西大学、南京农业大学、南京大学、新疆大学、湖南师范大学、上海外国语大学、哈尔滨工业大学、哈尔滨工程大学、北京工业大学、北京邮电大学、青海大学、中国矿业大学（北京）、中央民族大学、南京理工大学、内蒙古大学、大连海事大学、郑州大学、云南大学、华中师范大学、华东师范大学、福州大学、辽宁大学、西安交通大学、西南财经大学、中国地质大学（武汉）、北京交通大学、中国石油大学（华东）、中南大学、上海财经大学、西北大学、南京航空航天大学、华南师范大学、吉林大学、天津医科大学、上海交通大学、江南大学、武汉大学、天津大学、东北大学、北京理工大学、南开大学、北京化工大学、北京大学、华东理工大学、中国海洋大学、北京林业大学、陕西师范大学、南京师范大学这些大学
+找到实体为{'燕山大学': ['大学']}
+问题分类结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['校歌'], 'may_question_types': ['校歌']}
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['校歌'], 'may_question_types': ['校歌']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['校歌']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='燕山大学' return m.name, m.`校歌`"]
+小勇:燕山大学的校歌是《燕大之歌》
+找到实体为{'燕山大学': ['大学']}
+问题分类结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['校训'], 'may_question_types': ['校训', '描述,是什么']}
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['校训'], 'may_question_types': ['校训', '描述,是什么']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['校训']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='燕山大学' return m.name, m.`校训`"]
+小勇:燕山大学的校训是厚德、博学、求是
+找到实体为{'燕山大学': ['大学']}
+问题分类结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['现任领导'], 'may_question_types': ['现任领导']}
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['现任领导'], 'may_question_types': ['现任领导']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['现任领导']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='燕山大学' return m.name, m.`现任领导`"]
+小勇:燕山大学的现任领导是党委书记：赵险峰、校长：赵丁选
+找到实体为{'燕山大学': ['大学']}
+问题分类结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['简介'], 'may_question_types': ['简介']}
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['简介'], 'may_question_types': ['简介']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['简介']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='燕山大学' return m.name, m.desc"]
+小勇:燕山大学: 燕山大学（Yanshan University），简称“燕大”，坐落于河北省秦皇岛市，是河北省人民政府、教育部、工业和信息化部、国家国防科技工业局四方共建的全国重点大学，河北省重点支持的”双一流“学科建设高校，入选国家建设高水平大学公派研究生项目、国家“特色重点学科项目”建设高校、卓越工程师教育培养计划、国家大学生创新性实验计划、国家级大学生创新创业训练计划、全国深化创新创业教育改革示范高校、中国政府奖学金来华留学生接收院校，北京高科大学联盟、CDIO工程教育联盟、“一带一路”航天创新联盟成员单位，中俄工科大学联盟观察员单位。[2-3]
+找到实体为{'燕山大学': ['大学']}
+问题分类结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['地址'], 'may_question_types': ['地址']}
+整合后的结果为{'args': {'燕山大学': ['大学']}, 'question_types': ['地址'], 'may_question_types': ['地址']}
+{'slot_list': ['大学'], 'slot_values': {'大学': '燕山大学'}, 'user_intent': ['地址']}
+解析后的sql 为 ["MATCH (m) where (m:`大学`) and m.name='燕山大学' return m.name, m.`地址`"]
+小勇:燕山大学的地址是河北省秦皇岛市海港区河北大街西段438号
+找到实体为{'河北省': ['主管单位', '城市']}
+问题分类结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+整合后的结果为{'args': {'河北省': ['主管单位', '城市']}, 'question_types': ['城市有什么学校'], 'may_question_types': ['城市有什么学校', '包含']}
+{'slot_list': ['主管单位', '城市'], 'slot_values': {'主管单位': '河北省'}, 'user_intent': ['城市有什么学校']}
+解析后的sql 为 ["MATCH (m)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='河北省' return m.name, n.name", "MATCH (m)-[]-(mm)<-[:`位于`]-(n:`大学`) where (m:`大学` or m:`城市`) and m.name='河北省' return m.name, n.name"]
+小勇:河北省 有 衡水职业技术学院、衡水学院、廊坊卫生职业学院、廊坊燕京职业技术学院、廊坊职业技术学院、河北石油职业技术学院、河北东方学院、北京中医药大学东方学院、燕京理工学院、防灾科技学院、北华航天工业学院、中国人民警察大学、华北科技学院、廊坊师范学院、渤海理工职业学院、沧州幼儿师范高等专科学校、沧州医学高等专科学校、渤海石油职业学院、沧州职业技术学院、沧州交通学院、沧州师范学院、河北水利电力学院、承德应用技术职业学院、承德护理职业学院、河北旅游职业学院、河北石油职业技术大学、河北民族师范学院、承德医学院、宣化科技职业学院、张家口职业技术学院、张家口学院、河北北方学院、河北建筑工程学院、河北工艺美术职业学院、保定幼儿师范高等专科学校、冀中职业学院、保定电力职业技术学院、保定职业技术学院、河北软件职业技术学院、保定理工学院、河北农业大学现代科技学院、河北大学工商学院、河北科技学院、中央司法警官学院、河北金融学院、保定学院、河北农业大学、河北大学、邢台应用技术职业学院、河北机电职业技术学院、邢台医学高等专科学校、河北科技工程职业技术大学、邢台学院、邯郸科技职业学院、邯郸幼儿师范高等专科学校、河北司法警官职业学院、邯郸职业技术学院、河北工程大学科信学院、邯郸学院、河北工程大学、河北对外经贸职业学院、秦皇岛职业技术学院、河北建材职业技术学院、河北环境工程学院、燕山大学里仁学院、河北科技师范学院、燕山大学、曹妃甸职业技术学院、唐山幼儿师范高等专科学校、唐山科技职业技术学院、唐山工业职业技术学院、唐山职业技术学院、河北能源职业技术学院、华北理工大学冀唐学院、华北理工大学轻工学院、唐山学院、唐山师范学院、华北理工大学、河北轨道运输职业技术学院、石家庄幼儿师范高等专科学校、石家庄科技职业学院、河北劳动关系职业学院、河北正定师范高等专科学校、石家庄人民医学高等专科学校、石家庄经济职业学院、石家庄医学高等专科学校、河北女子职业技术学院、石家庄科技信息职业学院、石家庄理工职业学院、石家庄工商职业学院、石家庄邮电职业技术学院、石家庄信息工程职业学院、河北化工医药职业技术学院、河北交通职业技术学院、石家庄财经职业学院、河北艺术职业学院、石家庄城市经济职业学院、石家庄工程职业学院、石家庄铁路职业技术学院、河北政法职业学院、石家庄职业技术学院、河北中医学院、河北地质大学华信学院、石家庄铁道大学四方学院、河北医科大学临床学院、河北经贸大学经济管理学院、河北师范大学汇华学院、河北工业职业技术大学、河北外国语学院、河北美术学院、河北工程技术学院、河北传媒学院、河北经贸大学、河北体育学院、石家庄铁道大学、石家庄学院、河北师范大学、河北医科大学、河北科技大学、河北地质大学这些大学
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://10.1.3.147:30000/ (Press CTRL+C to quit)
+找到实体为{'河北省': ['主管单位', '城市']}
+89.248.172.20 - - [07/Mar/2022 22:28:32] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.172.20 - - [07/Mar/2022 22:28:32] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+101.133.136.80 - - [08/Mar/2022 00:09:14] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03d}`w\x0b\x8a\x08\x96³ï4\x04\x8bÇéÐÁ$\x9d\x1f!±\x86\x93\x8a\x8f¬\xa0\xa0»\x00ï ×ñ¸e\x8f\x1c°\x83Ø\x9a\x88¸\x0cüì\x85ËÓOÁ\x07\x8fýç\x9eB¢´ç\x82\x1cj\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+101.133.136.80 - - [08/Mar/2022 00:09:14] "[35m[1m  üd}`w³ï4ÇéÐÁ$!±¬  » ï ×ñ¸e°Ø¸üìËÓOÁýçB¢´çj >À,À0 Ì©Ì¨ÌªÀ+À/ À$À( kÀ#À' gÀ[0m" HTTPStatus.BAD_REQUEST -
+101.133.136.80 - - [08/Mar/2022 00:09:14] "GET / HTTP/1.1" 200 -
+89.248.165.226 - - [08/Mar/2022 01:24:45] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.226 - - [08/Mar/2022 01:24:45] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.250 - - [08/Mar/2022 04:28:20] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.250 - - [08/Mar/2022 04:28:20] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -

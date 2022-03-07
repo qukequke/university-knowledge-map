@@ -20,6 +20,7 @@ def get_df():
     data = ([i['name'] for i in d])
     data = [{dis(k): dis(v) for k, v in dict_.items()} for dict_ in data]
     df = pd.DataFrame(data)
+    df['简称_2'] = df['简称'].apply(lambda x:(re.split('[（、，·]', x.rstrip('）'))) if not pd.isna(x) else [])
     return df
 
 
@@ -37,6 +38,16 @@ def create_university(df, g):
         sql = f"CREATE (n:`大学`{{{','.join(d)}}}) return n;"
         print(sql)
         g.run(sql)
+        list_ = row['简称_2']
+        if '中文名' in row:
+            for name in list_:
+                sql = f"CREATE (n:`大学简称`{{name:'{name}'}}) return n;"
+                print(sql)
+                g.run(sql)
+                sql = f"match (m:`大学`), (n:`大学简称`) where m.name='{row['中文名']}' and n.name='{name}' create (m)-[:`简称`]->(n)"
+                g.run(sql)
+                print(sql)
+
         # break
 
 
@@ -149,8 +160,15 @@ def get_detail(df):
 
 if __name__ == '__main__':
     from py2neo import Graph
-    from config import neo4j_support_url
+    # from config import neo4j_support_url
 
+    neo4j_support_url = {
+        # 'host': 'xx.xx.xx.xx',
+        'host': '106.14.140.139',
+        'port': 7687,
+        'user': 'neo4j',
+        'password': 'password',
+    }
     g = Graph(
         host=neo4j_support_url['host'],
         port=neo4j_support_url['port'],
@@ -159,6 +177,6 @@ if __name__ == '__main__':
     )
     df = get_df()
     create_university(df, g)  # 创建大学实体
-    city_save(g)  # 城市
-    create_univer_city(g)  # 大学和城市建立关系
-    get_detail(df)  # 211 985加入
+    # city_save(g)  # 城市
+    # create_univer_city(g)  # 大学和城市建立关系
+    # get_detail(df)  # 211 985加入

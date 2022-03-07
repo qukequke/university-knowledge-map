@@ -1,4 +1,11 @@
+import json
+import os
+
+import numpy as np
+import requests
+# from paddlenlp.embeddings import TokenEmbedding
 from py2neo import Graph
+from sklearn.metrics.pairwise import cosine_similarity
 from config import neo4j_support_url, object_name_list
 import ahocorasick
 
@@ -21,13 +28,44 @@ class AnswerSearcher:
         self.entity_names = list(self.entity_label_dict.keys())
         labels_pre = list(self.entity_label_dict.values())
         self.labels = list(set(labels_pre))
+        # print(self.labels)
         self.labels.sort(key=labels_pre.index)
         # entity_dict = {i: self.get_all_object_name(i) for i in object_name_list}
         entity_dict = {i: self.get_all_object_name(i) for i in self.labels}  # 改成所有标签
+        # print(entity_dict)
         self.region_words = sum([list(i) for i in entity_dict.values()], [])
         # print(self.region_words)
+        strip_profix = [i['n.name'].rstrip('省').rstrip('市') for i in self.g.run("match (n:`城市`) return n.name")]
+        self.region_words += strip_profix
         self.region_tree = self.build_actree(list(self.region_words))
         self.wdtype_dict = self.build_wdtype_dict(entity_dict)
+        new_city_dict = {i: ['城市'] for i in strip_profix}
+        self.wdtype_dict.update(new_city_dict)
+
+        # self.wordemb = TokenEmbedding("w2v.baidu_encyclopedia.target.word-word.dim300")
+        # self.word_vec_dict = self.get_word_vector(self.region_words)
+        # self.vec_matrix = np.array(list(self.word_vec_dict.values()))
+        # print(self.vec_matrix.shape)
+        # print(self.word_vec_matrix)
+
+    def similar_word(self, word):
+        d = cosine_similarity(self.get_word_vector(word), self.word_vec_matrix)
+        index_ = np.argmax(d[0])
+        return self.region_words[index_]
+
+    def get_word_vector(self, words):
+        file_name = 'data/university_vector.json'
+        if os.path.exists(file_name):
+            with open(file_name, 'r', encoding='utf-8') as f:
+                dict_ = json.load(f)
+        else:
+            r = requests.post('http://172.0.34.62:50001/api/vector', json={'text': words, 'mean': False})
+            d = (r.json())
+            dict_ = {name: vec for name, vec in zip(d['names'], d['data'])}
+            with open(file_name, 'w', encoding='utf-8') as f:
+                json.dump(dict_, f)
+        # print(dict_)
+        return dict_
 
     def build_wdtype_dict(self, entity_dict):
         wd_dict = {}
@@ -115,17 +153,6 @@ class AnswerSearcher:
         objects = [i.get('n.name') for i in ret]
         return objects
 
-    # @staticmethod
-    # def gen_blood_question(self):
-    #     """
-    #     通过模板产生血液问题
-    #     """
-    #     symptoms = self.get_all_object_name('症状')
-    #     belong_kws = ['属于什么分类']
-    #     a = ['什么时候发布的呢']
-    # def pinyin_dict(self):
-    #    from pinyin import pinyin
-
 
 neo4j_handler = AnswerSearcher(neo4j_support_url)
 
@@ -133,13 +160,12 @@ if __name__ == '__main__':
     # neo4j_handler.print_kg()
     neo4j_handler = AnswerSearcher(neo4j_support_url)
     # neo4j_handler.
-    d = neo4j_handler.g.run('MATCH (n) where n.nodeType=1 RETURN n.name').data()
-    names = [i['n.name'] for i in d]
-    file_name = 'data/neo4j_user_dict.txt'
-    names = [i for i in names if len(i) <= 10]
-    with open(file_name, 'w', encoding='utf-8') as f:
-        f.writelines([i+'\n' for i in names])
-
+    # d = neo4j_handler.g.run('MATCH (n) where  RETURN n.name').data()
+    # names = [i['n.name'] for i in d]
+    # file_name = 'data/neo4j_user_dict.txt'
+    # names = [i for i in names if len(i) <= 10]
+    # with open(file_name, 'w', encoding='utf-8') as f:
+    #     f.writelines([i+'\n' for i in names])
 
     # d = neo4j_handler.g.run("MATCH (m)<-[r:`暂不能献血`]-(n) where  m.name='纹身术' RETURN m.name, COALESCE(r.状态, '') as r_状态, r.暂缓时间").data()
     # print(d)

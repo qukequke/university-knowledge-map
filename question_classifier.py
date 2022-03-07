@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-# coding: utf-8
-# File: question_classifier.py
-# Author: lhy<lhy_in_blcu@126.com,https://huangyong.github.io>
-# Date: 18-10-4
-
 import os
 import ahocorasick
 # from .config import semantic_slot
+# from paddlenlp import Taskflow
+
 from util import logger
 from config import object_name_list
 from template import semantic_slot
@@ -18,11 +15,14 @@ class QuestionClassifier:
         # self.g = searcher.g
         entity_dict = {i: searcher.get_all_object_name(i) for i in object_name_list}
         self.region_words = sum([list(i) for i in entity_dict.values()], [])
-        print(self.region_words)
+        # print(self.region_words)
         # 构造领域actree
-        self.region_tree = self.build_actree(list(self.region_words))
+        # self.region_tree = self.build_actree(list(self.region_words))
+        self.region_tree = searcher.region_tree
         # 构建词典
-        self.wdtype_dict = self.build_wdtype_dict(entity_dict)
+        self.wdtype_dict = searcher.wdtype_dict
+        # print(self.wdtype_dict)
+        self.g = searcher.g
         # print(self.region_words)
         # 问句疑问词
         print('model init finished ......')
@@ -37,6 +37,16 @@ class QuestionClassifier:
         # print(question)
         medical_dict = self.check_medical(question)
         logger.info(f"找到实体为{medical_dict}")  # {'高血压': ['disease']
+        tmp_medical_dict = medical_dict.copy()
+        for k, v_list in tmp_medical_dict.items():
+            if '大学简称' in v_list:
+                new_k = [i['n.name'] for i in self.g.run(f"match (m:`大学简称`)<-[:`简称`]-(n:`大学`) where m.name='{k}' return n.name")][0]
+                medical_dict[new_k] = ['大学', ]
+                del medical_dict[k]
+            elif '城市' in v_list:
+                new_k = [i['m.name'] for i in self.g.run(f"match (m:`城市`) where m.name=~'{k}.?' return m.name")][0]
+                medical_dict[new_k] = ['城市', ]
+                del medical_dict[k]
         # if not medical_dict:
         #     return {}
         data['args'] = medical_dict
@@ -118,6 +128,9 @@ class QuestionClassifier:
                 return True
         return False
 
+    def paddle_ner(self, question):
+        ner = Taskflow("ner")
+        print(ner)
 
 if __name__ == '__main__':
     from neo4j_helper import neo4j_handler
@@ -131,7 +144,11 @@ if __name__ == '__main__':
         # question = '属于什么不良发音'
         # question = '昏厥属于什么'
         # question = '上呼吸道感染可以献血吗'
-        question = '河北省有什么大学'
+        # question = '河北有什么大学'
+        question = '唐山有啥学校'
+        # question = '兰大属于双一流吗'
+        # r = handler.paddle_ner(question)
+        # print(r)
         data = handler.classify(question)
         print(data)
         break

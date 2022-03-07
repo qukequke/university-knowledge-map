@@ -37,7 +37,7 @@ def a():
         "msgtype": "markdown",
         "markdown": {
             "title": "快来问我啊",
-            "text": answer,
+            "text": answer[0],
         },
     }
     print(resp_text)
@@ -45,4 +45,4 @@ def a():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=30000, debug=False)
+    app.run(host='0.0.0.0', port=5005, debug=False)
