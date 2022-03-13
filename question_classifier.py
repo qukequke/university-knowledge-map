@@ -128,9 +128,9 @@ class QuestionClassifier:
                 return True
         return False
 
-    def paddle_ner(self, question):
-        ner = Taskflow("ner")
-        print(ner)
+    # def paddle_ner(self, question):
+    #     ner = Taskflow("ner")
+    #     print(ner)
 
 if __name__ == '__main__':
     from neo4j_helper import neo4j_handler

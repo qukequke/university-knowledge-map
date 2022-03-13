@@ -13,6 +13,25 @@ semantic_slot = [
         "pretty": "{} 有 {}这些大学",
     },
     {
+        "question_type": "学校那个学科好",
+        "keywords": ["学科"],
+        "slot_list": ['大学'],
+        "sql": "MATCH (m:`大学`)-[:`包含`]->(n:`学科`) where {} return m.name, n.name",
+        "subject": "m.name",
+        "object": ["n.name", ],
+        "pretty": "{} 双一流学科为 {}",
+    },
+    {
+        "question_type": "学科哪个大学好",
+        "keywords": ["哪个大学", '大学', '学校'],
+        "slot_list": ['学科'],
+        "sql": "MATCH (m:`学科`)<-[:`包含`]->(n:`大学`) where {} return m.name, n.name",
+        "subject": "m.name",
+        "object": ["n.name", ],
+        "pretty": "{}属于双一流学科的学校为{}",
+    },
+
+    {
         "question_type": "学校的类别",
         "keywords": ['层次', '水平', '211', '985', '双一流'],
         "slot_list": ["大学"],

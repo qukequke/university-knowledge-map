@@ -157,8 +157,8 @@ class AnswerSearcher:
 neo4j_handler = AnswerSearcher(neo4j_support_url)
 
 if __name__ == '__main__':
-    # neo4j_handler.print_kg()
-    neo4j_handler = AnswerSearcher(neo4j_support_url)
+    neo4j_handler.print_kg()
+    # neo4j_handler = AnswerSearcher(neo4j_support_url)
     # neo4j_handler.
     # d = neo4j_handler.g.run('MATCH (n) where  RETURN n.name').data()
     # names = [i['n.name'] for i in d]

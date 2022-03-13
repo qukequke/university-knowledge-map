@@ -1,6 +1,6 @@
 # 大学知识图谱问答，目前非常简单, 以后可能会更新
 
-数据来源于百度百科，scrapy爬虫目录在scripts/univer/目录下 
+数据来源于百度百科及一些其他网页搜索内容复制，scrapy爬虫目录在scripts/univer/目录下 
 然后将数据存储到neo4j中 对问题进行解析
 通过actree得到实体，关键字得到问题类型，给出答案
 
@@ -11,21 +11,25 @@
 
 | 实体类型      | 实体数量 | 举例                   |
 | ------------| -------- | ---------------------- |
-| 大学         | 2735| 清华大学，北京大学             |
+| 大学         | 2739| 清华大学，北京大学             |
+| 大学简称      | 3128| 北大，兰大|
 | 城市         | 481| 河北省，北京市
 | 主管单位|  84 | 陕西省教育厅
-| 层次|  3  |  211,985, 双一流                        |
-| 总计|      | 3303|
+| 学校层次|  3  |  211,985, 双一流                        |
+| 学科|  108  |  生物学，地质学|
+| 总计|      | 6544|
 
 **1.2 知识图谱实体关系类型**
 
 |  中文含义   | 关系数量 | 举例                         |
 |  ---------- | -------- | ---------------------------- |
 |  主管单位     | 273    | 清华大学 主管单位是 北京市
-|  位于     | 2980 | 清华大学 位于 北京市
-|  包含 | 900    | 北京市 包含 顺义区 |
+|  位于     | 2707 | 清华大学 位于 北京市
+|  包含 | 450    | 北京市 包含 顺义区 |
 |  属于 | 278    | 北京大学 属于 985|
-|  总计       | 4431   |  约4431对关系                            |
+|  简称 | 3244    | 北京大学 检查 北大|
+|  包含 | 465    | 北京大学 包含 生物学学科|
+|  总计       | 7246   |  约7246对关系                            |
 
 # 支持问题
 
@@ -38,6 +42,46 @@
 燕山大学地址在哪
 燕山大学现任领导人是谁
 等
+```
+
+## 文件结构
+```angular2html
+.
+├── chatbot_graph.py  #运行在终端问答
+├── config.py  # 配置neo4j地址
+├── data
+│   ├── neo4j_user_dict.txt
+│   └── university_vector.json  # 暂未使用，neo4j所有实体转成的词向量，想用来做实体链接
+├── dingding.py  # 运行flask服务，在公网ip运行起来后可以在钉钉配置中配置到机器人里
+├── img  # 图片
+│   ├── dingding.jpg
+│   ├── img_1.png
+│   └── img.png
+├── neo4j_helper.py  # 操作neo4j基础类
+├── question_classifier.py  # 得到实体识别结果和问题类型
+├── question_parser.py  # 通过得到的问题结果和实体结果，给出答案
+├── requirements.txt  # 需要的包文件
+├── scripts
+│   ├── data
+│   │   ├── pc-code.json  # 省市包含数据
+│   │   ├── raw_table.csv  # 学校地址数据
+│   │   └── xiaoshuo.json  # 百度百科爬取的数据
+│   ├── main.py  # 把scripts/data数据导入到neo4j中
+│   └── univer  # 百度百科爬虫爬取 启动方法scrapy crawl spider1 -o xiaoshuo.json -s FEED_EXPORT_ENCODING=UTF-8
+│       ├── scrapy.cfg
+│       ├── univer
+│       │   ├── __init__.py
+│       │   ├── items.py
+│       │   ├── middlewares.py
+│       │   ├── pipelines.py
+│       │   ├── settings.py
+│       │   └── spiders
+│       │       ├── __init__.py
+│       │       └── spider1.py
+│       ├── university.csv
+│       └── xiaoshuo.json
+├── template.py  # 配置语义槽，回复模板
+└── util.py  # 工具函数,得到logger
 ```
 
 ## 使用步骤
@@ -102,6 +146,7 @@ python dingding.py
 - 2.4 等等。。
 希望各位不吝赐教，任何建议请联系我。
 邮箱：652530495@qq.com
-  
 
-### 码云链接https://gitee.com/qukequke/university-knowledge-map
+
+### github链接 https://github.com/qukequke/university-knowledge-map
+### 码云链接 https://gitee.com/qukequke/university-knowledge-map
